@@ -4,29 +4,41 @@ public class TestShape {
     public static void main(String[] args) {
         System.out.println("Testing/Demoing Question 3 (Shape Problem)...");
         // Create Shapes
-        Circle circle1 = new Circle(8);
-        Rectangle rectangle1 = new Rectangle(5,6);
-        Sphere sphere1 = new Sphere(12);
-        RectangularPrism recPris1 = new RectangularPrism(5,4,3);
+        System.out.println("Creating shapes...");
+        Circle circle = new Circle("circle",8);
+        Rectangle rectangle = new Rectangle("rectangle",5,6);
+        Sphere sphere = new Sphere("sphere",12);
+        RectangularPrism recPris = new RectangularPrism("recPris",5,4,3);
+        System.out.println();
+
+        // To String Methods
+        System.out.println("Testing to string methods...");
+        System.out.println(circle.toString());
+        System.out.println(rectangle.toString());
+        System.out.println(sphere.toString());
+        System.out.println(recPris.toString());
         System.out.println();
 
         // Draw Shapes (Had trouble using JavaFX Draw for 3D specifically)
-        circle1.drawShape();
-        rectangle1.drawShape();
-        sphere1.drawShape();
-        recPris1.drawShape();
+        System.out.println("Drawing shapes...");
+        circle.drawShape();
+        rectangle.drawShape();
+        sphere.drawShape();
+        recPris.drawShape();
         System.out.println();
 
         // Print Areas
-        System.out.printf("The area of circle1 is: %.3f %n", circle1.getArea());
-        System.out.printf("The area of rectangle1 is: %.3f %n", rectangle1.getArea());
-        System.out.printf("The area of sphere1 is: %.3f %n", sphere1.getArea());
-        System.out.printf("The area of recPris1 is: %.3f %n", recPris1.getArea());
+        System.out.println("Calculating Areas...");
+        System.out.printf("The area of circle1 is: %.3f %n", circle.getArea());
+        System.out.printf("The area of rectangle1 is: %.3f %n", rectangle.getArea());
+        System.out.printf("The area of sphere1 is: %.3f %n", sphere.getArea());
+        System.out.printf("The area of recPris1 is: %.3f %n", recPris.getArea());
         System.out.println();
 
         // Print Volumes
-        System.out.printf("The volume of sphere1 is: %.3f %n", sphere1.getVolume());
-        System.out.printf("The volume of recPris1 is: %.3f %n", recPris1.getVolume());
+        System.out.println("Calculating Volumes...");
+        System.out.printf("The volume of sphere1 is: %.3f %n", sphere.getVolume());
+        System.out.printf("The volume of recPris1 is: %.3f %n", recPris.getVolume());
         System.out.println();
 
         System.out.println("Test/Demo Complete...");
